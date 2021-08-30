@@ -5,4 +5,4 @@ A URL shortener microservice proof of concept built with Go.
 * MySQL database
 * Envoy proxy
 # Usage
-`Make Up`
+`make up`
