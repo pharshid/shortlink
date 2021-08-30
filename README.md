@@ -3,6 +3,6 @@
 A url URL shortener microservice proof of concept built with Go.
 * gRPC for communication
 * MySQL database
-* envoy proxy
+* Envoy proxy
 # Usage
-`Make Up`
+``Make Up``
