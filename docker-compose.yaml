@@ -35,7 +35,7 @@ services:
     #                $ <password>
     image: mysql
     volumes: 
-      - ./db:/docker-entrypoint-initdb.d
+      - ./svc/db:/docker-entrypoint-initdb.d
     restart: always
     environment: 
       MYSQL_ROOT_PASSWORD: 'root' 
