@@ -1,12 +1,5 @@
 version: "3.8"
 services:
-  client_svc:
-    build: svc/client
-    depends_on: 
-      - proxy_svc
-    restart: always
-    ports:
-      - "80:80"
   proxy_svc:
     build: svc/proxy
     depends_on: 
