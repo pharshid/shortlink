@@ -1,0 +1,44 @@
+syntax = "proto3";
+option go_package = "shortlink/api";
+package protos;
+
+// API Service definition
+service APIService {
+    // Create new shortcut
+    rpc CreateShortcut (CreateShortcutRequest) returns (CreateShortcutResponse) {}
+    // Delete existing shortcut
+    rpc DeleteShortcut (DeleteShortcutRequest) returns (DeleteShortcutResponse) {}
+    // Get url of existing shortcut
+    rpc GetShortcut (GetShortcutRequest) returns (GetShortcutResponse) {}
+}
+
+message CreateShortcutRequest {
+    string target_url = 1;
+}
+
+message CreateShortcutResponse {
+    ShortcutDetail shortcut = 1;
+}
+
+message DeleteShortcutRequest {
+    string url_token = 1;
+}
+
+message DeleteShortcutResponse {
+    bool success = 1;
+}
+
+message GetShortcutRequest {
+    string url_token = 1;
+}
+
+message GetShortcutResponse {
+    string target_url = 1;
+}
+
+message ShortcutDetail {
+    string url_token = 1;
+    string target_url = 2;
+    string created_at = 3;
+    int32 visits = 4; 
+}

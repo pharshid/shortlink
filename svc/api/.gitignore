@@ -1,3 +1,7 @@
+# Generated code
+api/*.pb.*
+shortlink/*.pb.*
+
 # Binaries for programs and plugins
 *.exe
 *.exe~

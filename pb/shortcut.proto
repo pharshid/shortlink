@@ -1,0 +1,19 @@
+syntax = "proto3";
+option go_package = "shortlink/shortcut";
+package protos;
+
+import "api.proto";
+
+service ShortcutService {
+    rpc CreateShortcut (InternalCreateShortcutRequest) returns (CreateShortcutResponse) {}
+    rpc DeleteShortcut (InternalDeleteShortcutRequest) returns (DeleteShortcutResponse) {}
+    rpc GetShortcut (GetShortcutRequest) returns (GetShortcutResponse) {}
+}
+
+message InternalCreateShortcutRequest {
+    string target_url = 1;
+}
+
+message InternalDeleteShortcutRequest {
+    string url_token = 1;
+}
