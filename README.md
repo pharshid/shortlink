@@ -1,8 +1,8 @@
-# shortlink
+# Shortlink
 
-A url URL shortener microservice proof of concept built with Go.
+A URL shortener microservice proof of concept built with Go.
 * gRPC for communication
 * MySQL database
 * Envoy proxy
 # Usage
-``Make Up``
+`Make Up`
