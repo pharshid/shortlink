@@ -57,7 +57,7 @@ func (store *MySQLStore) Create(targetURL string) (*api.ShortcutDetail, error) {
 		log.Printf("Error getting last insert ID: %v", err)
 		return nil, err
 	}
-	selq := "SELECT token, target_url, created_at, visits FROM shortcuts WHERE shortcut_id=?"
+	selq := "SELECT token, target_url, created_at, visits FROM shortcuts WHERE id=?"
 	sel := store.db.QueryRow(selq, newID)
 	detail := &api.ShortcutDetail{}
 	err = sel.Scan(&detail.UrlToken, &detail.TargetUrl, &detail.CreatedAt, &detail.Visits)
